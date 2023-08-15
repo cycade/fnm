@@ -103,3 +103,15 @@ pub struct Cli {
 pub fn parse() -> Cli {
     Cli::parse()
 }
+
+/// A fast and simple Node.js manager.
+#[derive(clap::Parser, Debug)]
+#[clap(name = "fnm", version = env!("CARGO_PKG_VERSION"), bin_name = "fnm")]
+pub struct CliConfig {
+    #[clap(flatten)]
+    pub config: FnmConfig,
+}
+
+pub fn parse_config() -> CliConfig {
+    CliConfig::parse()
+}

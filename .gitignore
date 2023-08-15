@@ -8,3 +8,7 @@ feature_tests/.tmp
 /site/public
 .vercel
 .proxy
+
+.vscode/
+.idea/
+.DS_Store

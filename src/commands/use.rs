@@ -27,6 +27,16 @@ pub struct Use {
     silent_if_unchanged: bool,
 }
 
+impl Default for Use {
+    fn default() -> Self {
+        return Use{
+            version: None,
+            install_if_missing: false,
+            silent_if_unchanged: false,
+        }
+    }
+}
+
 impl Command for Use {
     type Error = Error;
 

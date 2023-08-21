@@ -15,16 +15,16 @@ use thiserror::Error;
 pub struct Env {
     /// The shell syntax to use. Infers when missing.
     #[clap(long)]
-    shell: Option<Shells>,
+    pub shell: Option<Shells>,
     /// Print JSON instead of shell commands.
     #[clap(long, conflicts_with = "shell")]
-    json: bool,
+    pub json: bool,
     /// Deprecated. This is the default now.
     #[clap(long, hide = true)]
-    multi: bool,
+    pub multi: bool,
     /// Print the script to change Node versions every directory change
     #[clap(long)]
-    use_on_cd: bool,
+    pub use_on_cd: bool,
 }
 
 fn generate_symlink_path() -> String {

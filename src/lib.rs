@@ -27,7 +27,7 @@ mod remote_node_index;
 pub mod shell;
 mod system_info;
 mod system_version;
-mod user_version;
+pub mod user_version;
 pub mod user_version_reader;
 mod version;
 mod version_file_strategy;
